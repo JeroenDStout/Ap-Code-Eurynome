@@ -10,4 +10,4 @@
 
     // Register version
 
-#include "[TEMPLATE]/Pubc/Version.h"
+#include "Eurynome/Pubc/Version.h"

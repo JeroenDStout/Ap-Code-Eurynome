@@ -2,16 +2,16 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "[TEMPLATE]/Pubc/Version.h"
+#include "Eurynome/Pubc/Version.h"
 
-#include "[TEMPLATE]/-genc/def_repo_version.h"
-#include "[TEMPLATE]/-genc/def_contribute.h"
+#include "Eurynome/-genc/def_repo_version.h"
+#include "Eurynome/-genc/def_contribute.h"
 
-namespace [TEMPLATE] {
+namespace Eurynome {
 	namespace Core {
 		
-		BR_VERSION_DEFINE([TEMPLATE]);
-        BR_CONTRIBUTE_DEFINE([TEMPLATE]);
+		BR_VERSION_DEFINE(Eurynome);
+        BR_CONTRIBUTE_DEFINE(Eurynome);
 
 	}
 } 

@@ -22,6 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{73FB3815-84FC-41B3-9290-BC5490E22148}</ProjectGuid>
     <RootNamespace>Toolbox</RootNamespace>
+    <ProjectName>Eurynome</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -75,10 +76,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <PreBuildEvent />
-    <PreBuildEvent>
-      <Command>cd ../meta
-../../BlackRoot/meta/create_repo_version.bat "$(ProjectName)"</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,10 +88,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <PreBuildEvent />
-    <PreBuildEvent>
-      <Command>cd ../meta
-../../BlackRoot/meta/create_repo_version.bat "$(ProjectName)"</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -111,10 +106,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent />
-    <PreBuildEvent>
-      <Command>cd ../meta
-../../BlackRoot/meta/create_repo_version.bat "$(ProjectName)"</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -132,10 +124,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent />
-    <PreBuildEvent>
-      <Command>cd ../meta
-../../BlackRoot/meta/create_repo_version.bat "$(ProjectName)"</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Pubc\Version.h" />
@@ -144,7 +133,21 @@
   <ItemGroup>
     <ClCompile Include="..\Pubc\Version.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <BRVersionDef Include="..\..\BlackRoot\Meta\.brversion" />
+  </ItemGroup>
+  <ItemGroup>
+    <BRMetaDef Include="..\..\BlackRoot\Meta\.brmeta" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Meta\contributors.json" />
+    <None Include="..\Meta\libraries.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Meta\licence_name.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <Import Project="$(SolutionDir)\..\BlackRoot\Visual Studio\BRShared.targets" />
 </Project>

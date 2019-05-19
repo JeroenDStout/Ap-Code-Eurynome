@@ -6,10 +6,10 @@
 
 #include "BlackRoot/Pubc/Version Reg.h"
 
-namespace [TEMPLATE] {
+namespace Eurynome {
 namespace Core {
 
-	BR_VERSION_DECLARE([TEMPLATE]);
+	BR_VERSION_DECLARE(Eurynome);
 
 }
 }
