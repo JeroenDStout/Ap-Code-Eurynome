@@ -1,0 +1,5 @@
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+  <ItemType Name="EUMetaCppH" DisplayName="Eurynome Meta C++ Header" />
+  <ContentType Name="EUMetaCppH" ItemType="EUMetaCpp" DisplayName="Eurynome Meta C++ Header" />
+  <FileExtension Name=".meta-h" ContentType="EUMetaCppH" />
+</ProjectSchemaDefinitions>

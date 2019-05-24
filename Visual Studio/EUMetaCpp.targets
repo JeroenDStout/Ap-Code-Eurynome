@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="15.0">
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)EUMetaCppH.xml" />
+    <AvailableItemName Include="EUMetaCppH">
+      <Targets>EUMetaCppH</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <Target BeforeTargets="ClCompile" Name="EUMetaCppH">
+    <ItemGroup>
+      <EUMetaCppH>
+        <Message>Generating meta</Message>
+        <Command>python "$(SolutionDir)../Eurynome/Pub_build/build_meta_cpp_h.py" -input "%(FullPath)" -output_dir "$(ProjectDir)..\-genc"</Command>
+        <Outputs>$(ProjectDir)..\-genc\%(Filename).h</Outputs>
+        <BuildInParallel>true</BuildInParallel>
+      </EUMetaCppH>
+    </ItemGroup>
+    <CustomBuild Sources="@(EUMetaCppH)"
+        MinimalRebuildFromTracking="true"
+        TrackerLogDirectory="$(TLogLocation)"
+    />
+  </Target>
+</Project>

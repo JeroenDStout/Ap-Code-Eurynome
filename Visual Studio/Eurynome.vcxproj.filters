@@ -12,6 +12,9 @@
     <Filter Include="Version">
       <UniqueIdentifier>{ee8256a8-4eda-42a0-825e-5d369a9bedf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Meta cpp">
+      <UniqueIdentifier>{011b2d89-d756-4b23-bf98-c9f92ead0a2c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Pubc\Version.cpp">
